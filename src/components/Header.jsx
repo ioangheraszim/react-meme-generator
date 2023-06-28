@@ -4,10 +4,10 @@ export default function Header() {
     return (
         <nav className="nav-bar">
             <div className="left-nav">
-                <img src="./src/assets/troll-face.png" alt="navbar-icon" />
-                <h1>Meme Generator</h1>
+                <img className="nav-image" src="./src/assets/troll-face.png" alt="navbar-icon" />
+                <h2 className="nav-title">Meme Generator</h2>
             </div>
-            <p>React Course - Project 6</p>
+            <h4 className="nav-project">React Course - Project 6</h4>
         </nav>
     )
    

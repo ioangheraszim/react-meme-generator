@@ -1,12 +1,11 @@
-body {
-    font-family: "Karla", sans-serif;
-    margin: 0;
-}
-
 *,::before, ::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+body {
+    font-family: "Karla", sans-serif;
 }
 
 .container {
@@ -28,9 +27,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .nav-image {
+    width: 3rem;
+    margin-right: 1rem;
+  }
+
+  .nav-title {
+    font-size: 1.25rem;
+  }
+
+  .nav-project {
+    font-size: .75rem;
+    font-weight: 500;
+  }
+
 }
 
-.left-nav img {
-  width: 3rem;
-  margin-right: 1rem;
-}
