@@ -3,6 +3,9 @@ import memesData from "../memesData"
 
 export default function Meme() {
 
+    const [memeImage, setMemeImage] = React.useState("")
+
+    
     function getMemesData() {
         // get the array from memes data
         const memesArray = memesData.data.memes
@@ -12,6 +15,8 @@ export default function Meme() {
         
         // select url with the help of the random index number 
         const url = memesArray[randomNumber].url 
+
+        setMemeImage(url)
     }
     return (
         <main>
@@ -32,7 +37,7 @@ export default function Meme() {
                 </button>
             </div>
 
-            <img src="" alt="meme image" />             
+            <img className="meme-image" src={memeImage} alt="meme image" />             
         </main>
     )
 }
