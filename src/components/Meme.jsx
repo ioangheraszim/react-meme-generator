@@ -3,12 +3,13 @@ import memesData from "../memesData"
 
 export default function Meme() {
 
+    // state of images
     const [meme, setMeme] = React.useState({
         topText: "",
         bottomText: "",
         randomImage: "https://i.imgflip.com/1g8my4.jpg"
     })
-
+    
     const [memeImage, setMemeImages] = React.useState(memesData)
 
     
