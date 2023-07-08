@@ -9,3 +9,7 @@ Use State
 Concept of changing State
 
 Now learning about conditional rendering
+
+Practicing exercises in conditional rendering 
+
+&& truthy statements and ternary operations
