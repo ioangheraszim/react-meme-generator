@@ -13,3 +13,5 @@ Now learning about conditional rendering
 Practicing exercises in conditional rendering 
 
 && truthy statements and ternary operations
+
+todays lessons Forms in React (most difficult to use in React??)
