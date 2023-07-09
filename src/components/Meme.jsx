@@ -12,6 +12,15 @@ export default function Meme() {
     
     const [memeImage, setMemeImages] = React.useState(memesData)
 
+    function handleChange(event) {
+        const {name, value, type, checked} = event.target
+        setMeme(prevMeme => {
+            return {
+                ...prevMeme,
+                [name]: value
+            }
+        })
+    }
     
     function getMemesData() {
         // get the array from memes data
@@ -32,22 +41,32 @@ export default function Meme() {
         <main>
             <div className="form">
                 <input 
-                    placeholder="top text" 
-                    className="form-input" 
-                    type="text" 
+                    type="text"
+                    placeholder="Top text"
+                    className="form-input"
+                    onChange={handleChange}
+                    name="topText"
+                    value={meme.topText}
                 />
                 <input 
-                    placeholder="bottom text" 
-                    className="form-input" 
-                    type="text" />         
+                    type="text"
+                    placeholder="Bottom text"
+                    className="form-input"
+                    onChange={handleChange}
+                    name="bottomText"
+                    value={meme.bottomText}
+                />        
                 <button 
                         onClick={getMemesData} 
                         className="form-button"
                 >       Get a new meme image 🖼
                 </button>
             </div>
-
-            <img className="meme-image" src={meme.randomImagefunctoin} alt="meme image" />             
+            <div className="meme">
+                <img src={meme.randomImage} className="meme--image" />
+                <h2 className="meme-text top">{meme.topText}</h2>
+                <h2 className="meme-text bottom">{meme.bottomText}</h2>
+            </div>                       
         </main>
     )
 }
