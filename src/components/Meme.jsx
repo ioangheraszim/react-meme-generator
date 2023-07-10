@@ -13,7 +13,7 @@ export default function Meme() {
     const [memeImage, setMemeImages] = React.useState(memesData)
 
     function handleChange(event) {
-        const {name, value, type, checked} = event.target
+        const {name, value} = event.target
         setMeme(prevMeme => {
             return {
                 ...prevMeme,
